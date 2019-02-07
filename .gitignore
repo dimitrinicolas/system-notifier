@@ -1,5 +1,6 @@
 .DS_Store
 tmp
+di
 
 node_modules
 .npm-debug.log

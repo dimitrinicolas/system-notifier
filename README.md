@@ -1,4 +1,4 @@
-# system-notifier
+# system-notifier [![Build Status][ci badge]][ci link] [![Coverage Status][coverage badge]][coverage link]
 
 System notifier sending Telegram message and SMS.
 
@@ -10,7 +10,7 @@ npm install system-notifier
 
 ## Usage
 
-```js
+```javascript
 const SystemNotifier = require('system-notifier');
 /** Or with ES6+ */
 import SystemNotifier from 'system-notifier';
@@ -32,17 +32,34 @@ const notifier = new SystemNotifier({
 
 Then, call `notifier.notify` function with your message:
 
-```js
+```javascript
 notifier.notify('Internal Server Error...');
 ```
 
 You can add an emoji prefix with one of the following codes: `info` (ℹ️), `error` (❌), `warning` (⚠️) or `success` (✅).
 
-```js
+```javascript
 notifier.notify('Internal Server Error...', 'error');
 ```
 
 ## Build
+
+```bash
+npm run build
+```
+
+## Test
+
+Create a `.env` file and add your providers credentials:
+
+```dosini
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+TWILIO_AUTH_TOKEN=
+TWILIO_ACCOUNT_SID=
+TWILIO_FROM_NUMBER=
+TWILIO_TO_NUMBER=
+```
 
 ```bash
 npm run build
@@ -55,5 +72,10 @@ npm run build
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
+
+[ci badge]: https://travis-ci.org/dimitrinicolas/system-notifier.svg?branch=master
+[ci link]: https://travis-ci.org/dimitrinicolas/system-notifier
+[coverage badge]: https://coveralls.io/repos/github/dimitrinicolas/system-notifier/badge.svg?branch=master
+[coverage link]: https://coveralls.io/github/dimitrinicolas/system-notifier?branch=master
 
 [twilio-node]: https://github.com/twilio/twilio-node
