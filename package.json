@@ -21,9 +21,7 @@
     "lint": "tslint --project \"./tsconfig.json\"",
     "test": "nyc --reporter=lcov --reporter=text ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "publish": "clean-publish --files .nyc_output coverage",
-    "prepublishOnly": "npm run build",
-    "preversion": "npm run build"
+    "publish": "clean-publish --files .nyc_output coverage"
   },
   "devDependencies": {
     "@types/node": "^10.12.21",
