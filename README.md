@@ -48,7 +48,7 @@ notifier.notify('Internal Server Error...', 'error');
 npm run build
 ```
 
-## Test
+## Testing
 
 Create a `.env` file and add your providers credentials:
 
@@ -62,7 +62,7 @@ TWILIO_TO_NUMBER=
 ```
 
 ```bash
-npm run build
+npm test
 ```
 
 ## Related
