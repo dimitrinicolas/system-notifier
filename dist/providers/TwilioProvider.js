@@ -17,6 +17,9 @@ class TwilioProvider extends Provider_1.default {
         else {
             toNumbers = this.options.toNumber;
         }
+        if (!this.client) {
+            return Promise.reject();
+        }
         return Promise.all(toNumbers.map(to => new Promise((resolve, reject) => {
             this.client.messages
                 .create({

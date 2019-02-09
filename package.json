@@ -1,6 +1,6 @@
 {
   "name": "system-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "System notifier sending Telegram message and SMS",
   "author": "Dimitri NICOLAS <dimitri@ooeo.fr>",
   "license": "MIT",

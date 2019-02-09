@@ -36,6 +36,10 @@ class TwilioProvider extends Provider {
       toNumbers = this.options.toNumber;
     }
 
+    if (!this.client) {
+      return Promise.reject();
+    }
+
     return Promise.all(
       toNumbers.map(
         to =>
